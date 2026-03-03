@@ -1,1 +1,878 @@
-<html><body><h1>Coming Soon</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Havana Commercial | Invest in Havana's Commercial Future</title>
+  <meta name="description" content="Havana Commercial connects global investors with premier commercial real estate opportunities in Havana, Cuba. Hospitality, retail, office, and mixed-use developments." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://havanacommercial.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://havanacommercial.com" />
+  <meta property="og:title" content="Havana Commercial | Invest in Havana's Commercial Future" />
+  <meta property="og:description" content="Premier commercial real estate investment opportunities in Havana, Cuba. Hospitality, retail, office & mixed-use sectors." />
+  <meta property="og:image" content="https://havanacommercial.com/og-image.jpg" />
+  <meta property="og:site_name" content="Havana Commercial" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Havana Commercial | Invest in Havana's Commercial Future" />
+  <meta name="twitter:description" content="Premier commercial real estate investment opportunities in Havana, Cuba." />
+  <meta name="twitter:image" content="https://havanacommercial.com/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Havana Commercial",
+    "url": "https://havanacommercial.com",
+    "email": "info@havanacommercial.com",
+    "description": "Premier commercial real estate investment opportunities in Havana, Cuba.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Havana",
+      "addressCountry": "CU"
+    },
+    "knowsAbout": ["Commercial Real Estate", "Hospitality Investment", "Retail Investment", "Office Space", "Mixed-Use Development"]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ RESET & BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --charcoal-dark: #2a2e32;
+      --charcoal: #3c4349;
+      --copper: #c87533;
+      --amber: #ffb860;
+      --amber-light: #ffd499;
+      --white: #ffffff;
+      --off-white: #f5f2ee;
+      --text-muted: #8a8f95;
+      --border: rgba(200,117,51,0.25);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--charcoal-dark);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ============ ANIMATIONS ============ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+    @keyframes pulse-ring {
+      0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(200,117,51,0.5); }
+      70%  { transform: scale(1); box-shadow: 0 0 0 16px rgba(200,117,51,0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(200,117,51,0); }
+    }
+    @keyframes lineGrow {
+      from { width: 0; }
+      to   { width: 60px; }
+    }
+    @keyframes counterUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-up  { animation: fadeUp 0.8s ease both; }
+    .animate-fade-in  { animation: fadeIn 1s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.35s; }
+    .delay-4 { animation-delay: 0.5s; }
+    .delay-5 { animation-delay: 0.65s; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(42,46,50,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--white); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--amber); }
+    .nav-cta {
+      background: var(--copper);
+      color: var(--white) !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--amber) !important; color: var(--charcoal-dark) !important; transform: translateY(-1px); }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(200,117,51,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,184,96,0.10) 0%, transparent 45%),
+        linear-gradient(160deg, #1a1d20 0%, #2a2e32 40%, #3c4349 100%);
+      padding-top: 5rem;
+    }
+    .hero-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,117,51,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,117,51,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: fadeIn 2s ease;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 2rem;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(200,117,51,0.15);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2rem;
+    }
+    .hero-eyebrow::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse-ring 2s infinite; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+    .hero-title .accent {
+      background: linear-gradient(135deg, var(--copper), var(--amber), var(--amber-light));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.70);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--copper), var(--amber));
+      color: var(--charcoal-dark);
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(200,117,51,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,117,51,0.55); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--amber); background: rgba(255,184,96,0.08); }
+
+    /* ============ STATS BAR ============ */
+    .stats-bar {
+      background: rgba(60,67,73,0.6);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 1rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--amber);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    /* ============ SECTIONS ============ */
+    section { padding: 7rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      color: var(--white);
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.60);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 3.5rem;
+    }
+    .divider-line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, var(--copper), var(--amber));
+      border-radius: 2px;
+      margin: 1.2rem 0 2rem;
+      animation: lineGrow 0.8s ease both;
+    }
+
+    /* ============ SECTORS ============ */
+    .sectors-bg {
+      background: linear-gradient(180deg, var(--charcoal-dark) 0%, #1e2226 100%);
+    }
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .sector-card {
+      background: rgba(60,67,73,0.5);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .sector-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--copper), var(--amber));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .sector-card:hover::before { transform: scaleX(1); }
+    .sector-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--copper);
+      background: rgba(60,67,73,0.8);
+    }
+    .sector-icon {
+      font-size: 3rem;
+      margin-bottom: 1.2rem;
+      display: block;
+      animation: float 4s ease-in-out infinite;
+    }
+    .sector-card:nth-child(2) .sector-icon { animation-delay: 0.5s; }
+    .sector-card:nth-child(3) .sector-icon { animation-delay: 1s; }
+    .sector-card:nth-child(4) .sector-icon { animation-delay: 1.5s; }
+    .sector-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .sector-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+    .sector-badge {
+      display: inline-block;
+      background: rgba(200,117,51,0.2);
+      border: 1px solid rgba(200,117,51,0.4);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+
+    /* ============ MARKET OPPORTUNITY ============ */
+    .market-bg {
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(200,117,51,0.12) 0%, transparent 55%),
+        linear-gradient(180deg, #1e2226 0%, var(--charcoal-dark) 100%);
+    }
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .market-visual {
+      position: relative;
+    }
+    .market-card-big {
+      background: rgba(60,67,73,0.6);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .market-card-big::after {
+      content: '';
+      position: absolute;
+      bottom: -30px; right: -30px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,117,51,0.15) 0%, transparent 70%);
+    }
+    .market-bar-list { list-style: none; margin-top: 1.5rem; }
+    .market-bar-item { margin-bottom: 1.4rem; }
+    .market-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.5rem;
+    }
+    .market-bar-label span { color: var(--amber); font-weight: 600; }
+    .market-bar-track {
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .market-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(to right, var(--copper), var(--amber));
+      transition: width 1.5s ease;
+    }
+    .market-bullets { list-style: none; }
+    .market-bullets li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      align-items: flex-start;
+    }
+    .bullet-icon {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: rgba(200,117,51,0.15);
+      border: 1px solid rgba(200,117,51,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .bullet-text h4 {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+    .bullet-text p { font-size: 0.83rem; color: rgba(255,255,255,0.50); line-height: 1.6; }
+
+    /* ============ SIGNUP ============ */
+    .signup-bg {
+      background: linear-gradient(135deg, #1a1d20 0%, #2a2e32 50%, #1a1d20 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .signup-inner {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .signup-form {
+      background: rgba(60,67,73,0.5);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      margin-top: 2.5rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+    .form-group input,
+    .form-group select {
+      background: rgba(42,46,50,0.8);
+      border: 1px solid rgba(200,117,51,0.2);
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      transition: border-color 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus { border-color: var(--copper); box-shadow: 0 0 0 3px rgba(200,117,51,0.12); }
+    .form-group input::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group select option { background: #2a2e32; }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--copper), var(--amber));
+      color: var(--charcoal-dark);
+      padding: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 0.5rem;
+      box-shadow: 0 4px 20px rgba(200,117,51,0.35);
+    }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,117,51,0.5); }
+    .form-note { font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; }
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--amber);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #151719;
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--amber);
+    }
+    .footer-logo span { color: rgba(255,255,255,0.5); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--amber); }
+    .footer-divider { width: 100%; height: 1px; background: var(--border); }
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-email { font-size: 0.82rem; color: var(--copper); }
+    .footer-email a { color: inherit; text-decoration: none; }
+    .footer-email a:hover { color: var(--amber); }
+    .footer-es { font-size: 0.75rem; color: rgba(255,255,255,0.25); font-style: italic; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { display: none; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: none; }
+      .market-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .signup-form { padding: 2rem 1.5rem; }
+      section { padding: 5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Havana<span>Commercial</span></a>
+    <ul class="nav-links">
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#market">Market</a></li>
+      <li><a href="#invest" class="nav-cta">Invest Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow animate-fade-up">Early Investor Access Open</div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Invest in<br/><span class="accent">Havana's Commercial</span><br/>Future
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-2">
+        Position yourself at the forefront of one of the world's most anticipated real estate markets.
+        Havana's commercial landscape is poised for historic transformation.
+      </p>
+      <div class="hero-actions animate-fade-up delay-3">
+        <a href="#invest" class="btn-primary">Register Your Interest</a>
+        <a href="#sectors" class="btn-outline">Explore Sectors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat animate-fade-up delay-1">
+        <span class="stat-number">2.1M+</span>
+        <span class="stat-label">Population</span>
+      </div>
+      <div class="stat animate-fade-up delay-2">
+        <span class="stat-number">$4.2B</span>
+        <span class="stat-label">Projected Market</span>
+      </div>
+      <div class="stat animate-fade-up delay-3">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Heritage Buildings</span>
+      </div>
+      <div class="stat animate-fade-up delay-4">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Investment Sectors</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTORS -->
+  <section class="sectors-bg" id="sectors">
+    <div class="section-inner">
+      <p class="section-tag animate-fade-up">Investment Sectors</p>
+      <h2 class="section-title animate-fade-up delay-1">Four Pillars of<br/>Commercial Opportunity</h2>
+      <div class="divider-line"></div>
+      <p class="section-subtitle animate-fade-up delay-2">
+        Havana presents unique opportunities across four distinct commercial sectors,
+        each offering compelling returns for forward-thinking investors.
+      </p>
+      <div class="sectors-grid">
+
+        <!-- Hospitality -->
+        <div class="sector-card animate-fade-up delay-1">
+          <span class="sector-icon">🏨</span>
+          <h3 class="sector-name">Hospitality</h3>
+          <p class="sector-desc">
+            Boutique hotels, luxury resorts, and historic paradores. Havana's booming tourism sector demands world-class hospitality infrastructure across its iconic waterfront and colonial districts.
+          </p>
+          <span class="sector-badge">High Demand</span>
+        </div>
+
+        <!-- Retail -->
+        <div class="sector-card animate-fade-up delay-2">
+          <span class="sector-icon">🏬</span>
+          <h3 class="sector-name">Retail</h3>
+          <p class="sector-desc">
+            Mixed retail developments, flagship commercial corridors, and experiential marketplaces. Cuba's emerging consumer market represents a rare first-mover advantage for retail investors.
+          </p>
+          <span class="sector-badge">First Mover</span>
+        </div>
+
+        <!-- Office -->
+        <div class="sector-card animate-fade-up delay-3">
+          <span class="sector-icon">🏢</span>
+          <h3 class="sector-name">Office</h3>
+          <p class="sector-desc">
+            Modern Class-A office parks, co-working hubs, and business centers designed to attract multinational corporations establishing their Cuban operations.
+          </p>
+          <span class="sector-badge">Growth Sector</span>
+        </div>
+
+        <!-- Mixed-Use -->
+        <div class="sector-card animate-fade-up delay-4">
+          <span class="sector-icon">⭐</span>
+          <h3 class="sector-name">Mixed-Use</h3>
+          <p class="sector-desc">
+            Integrated developments that combine residential, commercial, retail, and recreational spaces — maximizing land value and creating self-sustaining urban communities.
+          </p>
+          <span class="sector-badge">Premium ROI</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET OPPORTUNITY -->
+  <section class="market-bg" id="market">
+    <div class="section-inner">
+      <div class="market-grid">
+        <div>
+          <p class="section-tag animate-fade-up">Market Opportunity</p>
+          <h2 class="section-title animate-fade-up delay-1">Why Havana,<br/>Why Now</h2>
+          <div class="divider-line"></div>
+          <ul class="market-bullets">
+            <li class="animate-fade-up delay-2">
+              <div class="bullet-icon">🌍</div>
+              <div class="bullet-text">
+                <h4>Strategic Caribbean Location</h4>
+                <p>Havana sits at the crossroads of major Atlantic shipping and tourism routes, offering unparalleled strategic value for regional business operations.</p>
+              </div>
+            </li>
+            <li class="animate-fade-up delay-3">
+              <div class="bullet-icon">📈</div>
+              <div class="bullet-text">
+                <h4>Pent-Up Investment Demand</h4>
+                <p>Decades of limited foreign investment have created extraordinary supply constraints, positioning early investors to capture outsized returns as markets normalize.</p>
+              </div>
+            </li>
+            <li class="animate-fade-up delay-4">
+              <div class="bullet-icon">🏛️</div>
+              <div class="bullet-text">
+                <h4>UNESCO Heritage Assets</h4>
+                <p>Old Havana's UNESCO World Heritage designation ensures permanent cultural value, protecting and enhancing real estate investments in and around the historic center.</p>
+              </div>
+            </li>
+            <li class="animate-fade-up delay-5">
+              <div class="bullet-icon">✈️</div>
+              <div class="bullet-text">
+                <h4>Tourism Infrastructure Growth</h4>
+                <p>Havana's international airport expansions and new direct routes from key markets are driving exponential growth in business and leisure travel.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="market-visual animate-fade-up delay-2">
+          <div class="market-card-big">
+            <p class="section-tag" style="margin-bottom:1.2rem;">Sector Demand Index</p>
+            <ul class="market-bar-list">
+              <li class="market-bar-item">
+                <div class="market-bar-label">Hospitality <span>94%</span></div>
+                <div class="market-bar-track"><div class="market-bar-fill" style="width:94%"></div></div>
+              </li>
+              <li class="market-bar-item">
+                <div class="market-bar-label">Retail <span>82%</span></div>
+                <div class="market-bar-track"><div class="market-bar-fill" style="width:82%"></div></div>
+              </li>
+              <li class="market-bar-item">
+                <div class="market-bar-label">Mixed-Use <span>78%</span></div>
+                <div class="market-bar-track"><div class="market-bar-fill" style="width:78%"></div></div>
+              </li>
+              <li class="market-bar-item">
+                <div class="market-bar-label">Office <span>65%</span></div>
+                <div class="market-bar-track"><div class="market-bar-fill" style="width:65%"></div></div>
+              </li>
+            </ul>
+            <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);">
+              <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;">Based on investor sentiment surveys and regional market analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="signup-bg" id="invest">
+    <div class="signup-inner">
+      <p class="section-tag animate-fade-up" style="text-align:center;">Investor Registration</p>
+      <h2 class="section-title animate-fade-up delay-1" style="text-align:center;">Secure Your Position<br/>in Havana's Future</h2>
+      <div class="divider-line" style="margin:1.2rem auto 2rem;"></div>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:1.7;margin-bottom:0;" class="animate-fade-up delay-2">
+        Join our exclusive investor registry to receive priority access to deal flow, market reports, and early-stage opportunities as Havana's commercial market develops.
+      </p>
+      <div class="signup-form animate-fade-up delay-3">
+        <form id="signup-form-hc">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hc-name">Full Name</label>
+              <input type="text" id="hc-name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="hc-email">Email Address</label>
+              <input type="email" id="hc-email" name="email" placeholder="john@company.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hc-interest">Investment Interest</label>
+            <select id="hc-interest" name="investment_interest" required>
+              <option value="" disabled selected>Select your primary interest...</option>
+              <option value="hospitality">🏨 Hospitality &amp; Hotels</option>
+              <option value="retail">🏬 Retail &amp; Commercial</option>
+              <option value="office">🏢 Office &amp; Business Parks</option>
+              <option value="mixed-use">⭐ Mixed-Use Developments</option>
+              <option value="portfolio">📊 Diversified Portfolio</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">Register as Investor →</button>
+          <p class="form-note">🔒 Your information is confidential. We never share investor data with third parties.</p>
+        </form>
+        <div class="success-msg" id="hc-success">
+          🌟 Welcome to Havana Commercial!<br/>
+          <span style="font-size:1rem;font-family:Inter,sans-serif;color:rgba(255,255,255,0.6);font-weight:300;">We'll be in touch with exclusive opportunities.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Havana<span>Commercial</span></div>
+      <nav>
+        <div class="footer-links">
+          <a href="#sectors">Sectors</a>
+          <a href="#market">Market Analysis</a>
+          <a href="#invest">Invest</a>
+          <a href="mailto:info@havanacommercial.com">Contact</a>
+        </div>
+      </nav>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Havana Commercial. All rights reserved.</p>
+        <p class="footer-email"><a href="mailto:info@havanacommercial.com">info@havanacommercial.com</a></p>
+        <p class="footer-es">Disponible en Español próximamente</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-fade-up').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      observer.observe(el);
+    });
+
+    // Native form fallback
+    document.getElementById('signup-form-hc').addEventListener('submit', function(e) {
+      if (typeof initSignupForm === 'undefined') {
+        e.preventDefault();
+        this.style.display = 'none';
+        document.getElementById('hc-success').style.display = 'block';
+      }
+    });
+  </script>
+
+  <script src="../supabase-signup.js"></script>
+  <script>initSignupForm('havanacommercial.com')</script>
+</body>
+</html>
